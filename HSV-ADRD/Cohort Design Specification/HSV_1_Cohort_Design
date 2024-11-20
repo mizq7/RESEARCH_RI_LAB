@@ -1,0 +1,82 @@
+digraph "HSV-1 Cohort Design" {
+	subgraph cluster_CohortA {
+		label="Cohort A"
+		A [label="Condition Occurrence
+Patients infected with HSV-1 for the first time"]
+		A1 [label="Inclusion Criteria
+≥ 1 condition occurrence between 365 days prior to index and 1095 days post-index"]
+		A2 [label="Exclusion Criteria
+≤ 0 condition occurrence of any excluded diseases between all time prior to index and all time post-index"]
+		A3 [label="Observation Period
+Event will persist until the end of continuous observation for the condition exposure"]
+		A4 [label="Medication Exposure Condition
+0 days of medication exposure prior to index date"]
+		A5 [label="Observation Period
+Medication exposure event will persist until the end of continuous observation"]
+		A -> A1
+		A -> A2
+		A -> A3
+		A1 -> A4
+		A3 -> A5
+	}
+	subgraph cluster_CohortB {
+		label="Cohort B"
+		B [label="Condition Occurrence
+Patients infected with HSV-1 for the first time"]
+		B1 [label="Inclusion Criteria
+≥ 1 condition occurrence between 365 days prior to index and 1095 days post-index"]
+		B2 [label="Exclusion Criteria
+Exclusion criteria not implemented"]
+		B3 [label="Observation Period
+Event will persist until the end of continuous observation for the condition exposure"]
+		B4 [label="Medication Exposure Condition
+0 days of medication exposure prior to index date"]
+		B5 [label="Observation Period
+Medication exposure event will persist until the end of continuous observation"]
+		B -> B1
+		B -> B2
+		B -> B3
+		B1 -> B4
+		B3 -> B5
+	}
+	subgraph cluster_CohortC {
+		label="Cohort C"
+		C [label="Condition Occurrence
+Patients infected with HSV-1 for the first time"]
+		C1 [label="Inclusion Criteria
+≥ 1 condition occurrence between 365 days prior to index and indefinite days post-index"]
+		C2 [label="Exclusion Criteria
+≤ 0 condition occurrence of any excluded diseases between all time prior to index and all time post-index"]
+		C3 [label="Observation Period
+Event will persist until the end of continuous observation for the condition exposure"]
+		C4 [label="Medication Exposure Condition
+0 days of medication exposure prior to index date"]
+		C5 [label="Observation Period
+Medication exposure event will persist until the end of continuous observation"]
+		C -> C1
+		C -> C2
+		C -> C3
+		C1 -> C4
+		C3 -> C5
+	}
+	subgraph cluster_CohortD {
+		label="Cohort D"
+		D [label="Condition Occurrence
+Patients infected with HSV-1 for the first time"]
+		D1 [label="Inclusion Criteria
+≥ 1 condition occurrence between 365 days prior to index and indefinite days post-index"]
+		D2 [label="Exclusion Criteria
+Exclusion criteria not implemented"]
+		D3 [label="Observation Period
+Event will persist until the end of continuous observation for the condition exposure"]
+		D4 [label="Medication Exposure Condition
+0 days of medication exposure prior to index date"]
+		D5 [label="Observation Period
+Medication exposure event will persist until the end of continuous observation"]
+		D -> D1
+		D -> D2
+		D -> D3
+		D1 -> D4
+		D3 -> D5
+	}
+}
